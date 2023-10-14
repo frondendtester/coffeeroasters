@@ -1,6 +1,35 @@
+/* FONTS */
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+	url("../fonts/Roboto-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+	url("../fonts/Roboto-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+	url("../fonts/Roboto-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
 /* CUSTOM PROPS */
 :root	{
-	--accent-color: #EA625C ;
+	--accent-color: #0A775F ;
 	--font-family: "Roboto","Arial", sans-serif;
 	--text-color: #333 ;
 }
@@ -20,6 +49,7 @@ html	{
 
 
 body	{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -35,6 +65,7 @@ body	{
 img	{
 	max-width: 100%;
 	height: auto;
+	width: 235px;
 }
 
 /* OUTLINE STYLE */
@@ -46,343 +77,164 @@ img	{
 
 /* CONTAINER */
 .container	{
-	max-width: 1100px;
+	max-width: 1440px;
 	width: 100%;
-	padding-left: 50px;
-	padding-right: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.site-header {
-	padding-top: 30px;
-	padding-bottom: 79.46;
-	background-color: #fff;
+.main-content	{
+	flex-grow: 1;
 }
 
+
+/* MAIN-LINK */
+.main-link	{
+	display: inline-block;
+	padding: 16px 24px ;
+	border-radius: 4px;
+	font-family: var(--text-font);
+font-size: 16px;
+line-height: normal;
+font-weight: 500;
+background-color: var(--accent-color);
+color: #fff;
+text-decoration: none;
+transition: opacity 0.4s ease;
+}
+
+.main-link:hover	{
+	opacity: 0.8;
+}
+
+.main-link:active	{
+	opacity: 0.6;
+}
+
+
+/* SITE-HEADER */
+.site-header {
+padding-top: 40px;
+padding-bottom: 40px;
+background-color: #F3D7B7;
+}
 .site-header-container {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 }
 
 
-.logo-link {
+.logo-link	{
+	transition: opacity 0.4s ease;
+}
+
+.logo-link:hover	{
+	opacity: 0.8;
+}
+
+.logo-link:active	{
+	opacity: 0.6;
+}
+
+.logo-link 	{
 	display: block;
 }
 
 .logo-img {
-	padding-top: 30px;
-	padding-bottom: 170.46;
-	margin-left: auto;
-	margin-right: auto;
+	display: block;
+    width: 235px;
+    height: 24px;
+    object-fit: contain;
 }
 
-.site-header-actions {
-	display: flex;
-	align-items: center;
-}
 
-/* SITENAV */
 .sitenav-list {
-	padding: 0;
-	margin: 0;
-	margin-right: 30px;
 	display: flex;
-	list-style: none;
-
+    align-items: center;
+    padding: 0px;
+		margin: 0;
+    list-style: none;
 }
 
-.sitenav-item:not(:last-child)	{
-	margin-right: 30px;
+.sitenav-item	{
+margin-right: 40px;
 }
 
-.sitenav-link {
-	color: #333;
-	text-align: center;
-	font-family: var(--font-family);
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 150%;
-	letter-spacing: 1px;
-	text-decoration: none;
-	text-transform: capitalize;
+
+.sitenav-item:last-child	{
+	margin-right: 0;
 }
 
-/* MAIN-LINK */
-.main-link	{
-	justify-content: center;
-	align-items: center;
-	width: 260px;
-	height: 51px;
-	text-align: center;
-	font-family: var(--font-family);
-	font-size: 18px;
-	line-height: 15px;
+.sitenav-link	{
+	font-size: 12px;
+	line-height: normal;
 	font-weight: 700;
-	color: #fff;
-	background-color: var(--accent-color);
-	text-decoration: none;
+	letter-spacing: 1px;
 	text-transform: uppercase;
-	font-style: normal;
+	text-decoration: none;
+	color: var(--text-color);
+	transition: color 0.4s ease,
+	opacity 0,6s ease;
 }
 
-.hero-heading	{
-	font-family: var(--font-family);
-	width: 339px;
-	font-size: 40px;
-	font-style: 40px;
-	line-height: 1.2;
+.sitenav-link:hover	{
+	color: #8d6d6d;
 }
+
+.sitenav-link:active	{
+	opacity: 0.6;
+}
+
 
 
 /* HERO */
 .hero {
-	padding-top: 183px;
-	padding-bottom: 170.46px;
-	color: #000;
+color: #000;
+	background-color: #F3D7B7;
+}
+
+.main-content {
+flex-grow: 1;
 }
 
 .hero-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+margin-left: 150px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
 .hero-content {
-	width: 490px;
-	margin-right: 245px;
+	width: 447px;
+	padding-top: 156px;
+	padding-bottom: 249px;
 }
 
 .hero-heading {
-	text-align: center;
-	margin-top: 170.46;
-	margin-bottom: 30px;
-	color: #000;
+	margin-top: 0;
+	margin-bottom: 24px;
 	font-family: var(--font-family);
-	font-weight: 700;
-	line-height: 1.2;
-	font-size: 50px;
-	font-style: normal;
+	font-size: 64px;
+	line-height: normal;
 }
 
 .hero-text {
-	margin-top: 0px;
-	margin-bottom: 30px;
-	width: 450px;
-	height: 120px;
-	color: #777;
-	font-family: var(--font-family);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 150%;
+	width: 464px;
+	margin-bottom: 34px;
 }
 
-
-.hero-img {
-	width: 587px;
-	height: 565px;
+.hero-img	{
+	width: 710px;
+	height: 696px;
 	flex-shrink: 0;
-	background-image: url("../img/watches.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center	center;
-}
-
-
-/* FEATURES */
-.features {
-padding-top: 70px;
-padding-bottom: 70px;
-color: #000;
-}
-
-
-.features-list {
-	display: flex;
-justify-content: space-between;
-text-decoration: none;
-list-style: none;
-}
-
-.feature {
-flex-direction: column;
-
-}
-
-
-.feature-title {
-text-align: center;
-margin-bottom: 30px;
-color: #000;
-font-family: var(--font-family);
-font-weight: 700;
-line-height: 1.5;
-font-size: 18px;
-font-style: normal;
-}
-
-
-.feature-info {
-margin-top: 0;
-margin-bottom: 20px;
-color: #777;
-font-family: var(--font-family);
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.6;
-}
-
-
-
-.feature-hr-and-text	{
-	display: flex;
-	align-items: center;
-margin-right: 0;
-}
-
-
-
-.feature-hr {
-	width: 40px;
-	height: 3px;
-	background-color: var(--accent-color);
-margin: 0;
-}
-
-.feature-hr-text {
-padding-left: 10px;
-color: var(--accent-color);
-font-family: var(--font-family);
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 1.6%;
-text-transform: uppercase;
-}
-
-
-/* PROMO */
-.promo {
-	padding-top: 70px;
-	padding-bottom: 70px;
-	color: #000;
-}
-
-.promo-inner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.promo-content {
-	width: 490px;
-}
-
-.container	{
-	padding-right: 110px;
-}
-
-.promo-heading {
-	text-align: center;
-  margin-bottom: 30px;
-	color: #000;
-	font-family: var(--font-family);
-	font-size: 50px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 1.2;
-}
-
-
-.promo-text {
-margin-bottom: 30px;
-margin-left: 40px;
-	color: #777;
-	font-family: var(--font-family);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1.5;
-}
-
-.promo-img {
-	width: 400px;
-	height: 599.927px;
-	flex-shrink: 0;
-	background-image: url("../img/qo\'lda\ soat\ ko\'ryapti.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center	center;
-}
-
-
-
-/* AKSIYA */
-.aksiya {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #000;
-	background-image: url("../img/runners\ 1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.aksiya-inner- {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-left: 635px;
-	margin-bottom: 239.19px;
-	margin-right: 125px;
-}
-
-.container-aksiya {
-width: 490px;
-display: inline-flex;
-flex-direction: column;
-align-items: flex-start;
-
-}
-
-.aksiya-content- {
-		text-align: center;
-		margin-bottom: 30px;
-		color: #fff;
-		font-family: var(--font-family);
-		font-size: 50px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 1.2;
-	}
-
-.aksiya-heading {
-	margin-top: 240px;
-	text-align: center;
-	margin-bottom: 30px;
-	color: #fff;
-	font-family: var(--font-family);
-	font-size: 50px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 1.2;
-}
-
-
-.aksiya-text {
 	margin-top: 0;
-	margin-bottom: 30px;
-	color: #FFF;
-	font-family: var(--font-family);
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 1.5;
 }
+
+
+
 
 /* RETINA BG */
 @media
@@ -393,7 +245,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 	.aksiya	{
-		background-image: url("../img/runners\ 1@2x.jpg");
+		background-image: url("../");
 	}
 
 }
