@@ -271,6 +271,10 @@ line-height: 1.5;
 
 
 /* INDEX-COLLECTION */
+.index-collection	{
+	margin-bottom: 20px;
+}
+
 .index-collection-iner	{
 	padding: 50px 143px;
 background-color: var(--light-bg);
@@ -347,6 +351,76 @@ padding-left: 117px;
 } */
 
 
+/* INDEX-FEATURES */
+
+.index-features {
+margin-bottom: 30px;
+}
+
+.index-features-inner {
+padding: 50px 30px;
+background-image: url(../img/index-features-bg.jpg);
+background-size: 100% 700px;
+background-repeat: no-repeat;
+}
+
+.index-features-heading {
+margin-top: 0;
+margin-bottom: 10px;
+font-size: 50px;
+line-height: normal;
+text-transform: uppercase;
+color: #fff;
+text-align: center;
+}
+
+.index-features-lead {
+max-width: 580px;
+text-align: center;
+margin-top: 0;
+margin-bottom: 80px;
+margin-left: auto;
+margin-right: auto;
+color: #fff;
+}
+
+.index-features-list {
+display: flex;
+flex-wrap: wrap;
+padding: 0;
+margin: 0;
+margin-left: -20px;
+list-style: none;
+}
+
+.index-features-item {
+width: calc(100% / 3 - 20px);
+margin-left: 20px;
+margin-bottom: 30px;
+}
+
+.index-features-img {
+width: 433px;
+height: 500px;
+margin-bottom: 28px;
+object-fit: cover;
+}
+
+.index-features-item-heading {
+margin-top: 0;
+margin-bottom: 10px;
+text-transform: uppercase;
+font-size: 30px;
+line-height: normal;
+font-weight: 500;
+}
+
+.index-features-item-text {
+font-size: 18px;
+line-height: 28px;
+margin: 0;
+}
+
 
 /* RETINA BG */
 @media
@@ -363,4 +437,8 @@ only screen and (                min-resolution: 2dppx) {
 	.index-collection-iner	{
 		background-image: url(../img/fon-rasm@2x.jpg);
 		}
-}
+
+		.index-features-inner	{
+			background-image: url(../img/index-features-bg@2x.jpg);
+		}
+	}
